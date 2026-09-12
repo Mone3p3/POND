@@ -1,0 +1,57 @@
+Matriz de espacio - Matriz de Proyección
+
+--- Matrices Generales --------------------------------------------------------------
+
+1. Matriz de Mundo: Origen del mundo. Como están ordenados los elementos con respecto a un origen que es el centro de nuestro mundo (World Matrix).
+
+2. Matriz de Vista: Indica donde nos encontramos y hacia donde estamos viendo con respecto al mundo (View Matrix).
+
+3. Matriz de proyección: Indica como están ordenados nuestros elementos a partir de nuestro origen y extrae una imagen que se proyecta a nuestros monitores (RENDERIZACIÓN) (Prog Matrix).
+
+Matriz de un objeto x Matriz de mundo = Posiciona
+
+
+-El de mundo ubica en el mundo
+-El de vista muestra a la camara donde estan las cosas
+-El de proyección hace que la camara muestre las cosas en la pantalla.
+
+
+
+Matriz: Arreglo con información. Se determina según el escenario que escojamos.
+
+
+- Matrices de transformación:
+
+Traslación
+Rotación
+Escala
+
+
+Luz ambiental:
+Que el mundo se vea
+
+Luz especular:
+Punto máximo concentrado de luz
+
+Luz difusa:
+Crea sombras
+
+
+
+--- Aplicado en 3D ------------------------------------------------------
+
+2/3 campos de visión en juegos
+-Vista isométrica (aplana sin tanta profundidad)
+-Vista de perspectiva (profundidad)
+-FOV(Vista a los lados, como de pescado, no existía en estos tiempos)
+
+	
+
+--- Matriz de Proyección --------------------------------------------------
+
+Dice QUE vamos a ver al final
+
+
+Genera una imagen a partir de ciertos elementos teniendo en cuenta las vistas de arriba.
+
+

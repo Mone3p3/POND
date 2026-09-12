@@ -1,0 +1,137 @@
+
+
+*{
+
+    padding: 0%;
+    margin: 0%;
+
+}
+
+body{
+
+    font-family: 'Montserrat', -apple-system, 'Roboto', Helvetica, sans-serif;
+
+}
+
+button{
+
+    cursor:pointer;
+    background-color:white ;
+    color: rgb(68,182,234);
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    border: 2px solid rgb(68,182,234);
+    border-radius: 12px;
+    box-shadow: 0 0 10px 0 rgb(180,180,180);
+    
+
+}
+
+.login-container{
+
+    display: flex;
+    overflow: hidden;
+
+}
+
+.login-imagen-container{
+
+    flex:1;
+    background-color: aqua;
+    width: 50vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+
+}
+
+.login-imagen-gradient{
+
+    background-image: linear-gradient(to bottom, rgba(9, 9, 96, 0.344),rgba(91, 156, 160, 0.278));
+    width: 100%;
+    height: 100%;
+    
+}
+
+.login-imagen{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.login-info{
+
+    display: block;
+    flex:1;
+    margin-left: 50vw;
+    padding-top: 60px;
+    padding-left: 60px;
+
+}
+
+.login-text-login{
+
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 20px;
+
+}
+
+.login-fill-box-container{
+
+    justify-self: center;
+    width: 100%;
+    margin-left: 40px;
+
+
+}
+
+.login-fill-box{
+
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding:15px;
+    margin-bottom: 20px;
+    width: 70%;
+
+}
+
+.login-fill-box-placeholder-text{
+
+    font-size: 15px;
+    color: gray;
+
+}
+
+.login-info-bottom{
+
+    display: flex;
+    justify-content: space-between;
+    bottom: 40px;
+    margin-left: 20px;
+    width:80%;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.login-info-bottom-register{
+
+    display: flex;
+    text-decoration: none;
+
+}
+
+.login-info-bottom-login-button{
+
+    display: flex;
+    border-radius: 20px;
+
+}
+
+.link{
+    text-decoration: none;
+}

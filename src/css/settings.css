@@ -1,0 +1,121 @@
+
+html,body{
+
+    height: 100%;
+    margin:0;
+
+}
+
+
+/*--- IZQUIERDA ------------------------------------------------------------------------------*/
+
+.ajustes-izquierda{
+
+    display: flex;
+    flex:1;
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    flex-direction: column;
+
+}
+
+.ajustes-icon-container{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    height: 60px;
+    font-weight: bold;
+    margin-bottom: 60px;
+
+}
+
+.ajustes-icon{
+
+    height: 90%;
+    margin: 10px;
+
+}
+
+.ajustes-section-container{
+
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 100%;
+    align-items: center;
+    padding-left: 40px;
+    box-sizing: border-box;
+
+}
+
+.ajustes-section{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 95%;
+    height: 25%;
+
+}
+
+.ajustes-section:hover{
+
+    background-image: linear-gradient(to right, rgba(153, 222, 222, 0), rgba(61, 146, 182, 0.151), rgba(53, 26, 171, 0.332));
+
+}
+
+.ajustes-section:active{
+
+    background-image: linear-gradient(to right, rgba(153, 222, 222, 0.222), rgba(61, 146, 182, 0.266), rgba(53, 26, 171, 0.501));
+
+}
+
+.ajustes-section-icon{
+
+    height: 50%;
+    margin: 0 10px;
+
+}
+
+
+/*--- DERECHA ------------------------------------------------------------------------------*/
+
+
+.ajustes-derecha{
+
+    display: flex;
+    flex:1;
+    height: 100%;
+    width: 100%;
+    padding:40px;
+    flex-direction: column;
+
+}
+
+.ajustes-info-cuenta{
+
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+.ajustes-info-container{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin-bottom: 60px;
+    width: 100%;
+    align-items: center;
+
+}
+
