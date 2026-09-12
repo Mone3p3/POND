@@ -29,6 +29,7 @@ html,body{
     width: 50%;
     height: 60px;
     font-weight: bold;
+    font-size: 25px;
     margin-bottom: 60px;
 
 }
@@ -57,10 +58,10 @@ html,body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 10px;
     box-sizing: border-box;
     width: 95%;
-    height: 25%;
+    height: 80px;
+    gap: 10px;
 
 }
 
@@ -78,7 +79,7 @@ html,body{
 
 .ajustes-section-icon{
 
-    height: 50%;
+    width: 50px;
     margin: 0 10px;
 
 }
@@ -117,5 +118,25 @@ html,body{
     width: 100%;
     align-items: center;
 
+}
+
+.ajustes-info-busqueda{
+    border: 1.5px solid rgb(129, 153, 232); 
+    border-radius: 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 300px; 
+    height: 40px; 
+    background-color: rgba(240, 248, 255, 0.158);
+    padding: 0 20px;
+    gap:10px;
+    cursor: text;
+}
+
+.ajustes-info-busqueda input,
+.ajustes-info-busqueda input::placeholder{
+    color:rgb(100, 142, 214); 
+    font-weight: normal;
 }
 

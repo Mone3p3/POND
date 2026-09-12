@@ -8,25 +8,9 @@
 }
 
 body{
-
     font-family: 'Montserrat', -apple-system, 'Roboto', Helvetica, sans-serif;
-
 }
 
-button{
-
-    cursor:pointer;
-    background-color:white ;
-    color: rgb(68,182,234);
-    font-weight: bold;
-    font-size: 15px;
-    padding: 10px;
-    border: 2px solid rgb(68,182,234);
-    border-radius: 12px;
-    box-shadow: 0 0 10px 0 rgb(180,180,180);
-    
-
-}
 
 .login-container{
 
@@ -67,8 +51,10 @@ button{
     display: block;
     flex:1;
     margin-left: 50vw;
-    padding-top: 60px;
-    padding-left: 60px;
+    padding:60px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -76,7 +62,7 @@ button{
 
     font-weight: bold;
     font-size: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
 }
 
@@ -84,8 +70,7 @@ button{
 
     justify-self: center;
     width: 100%;
-    margin-left: 40px;
-
+    margin-left: 20px;
 
 }
 
@@ -93,13 +78,25 @@ button{
 
     border: 2px solid gray;
     border-radius: 10px;
-    padding:15px;
-    margin-bottom: 20px;
-    width: 70%;
+    padding:12px 15px;
+    margin: 20px 0;
+    width: 80%;
+    background: none;
+    display: block;
+    cursor:text;
+    font-size: 15px;
 
 }
 
-.login-fill-box-placeholder-text{
+.login-fill-box input{
+    color: black;
+}
+
+.login-fill-box input::placeholder{
+    color: gray;
+}
+
+.login-forgot{
 
     font-size: 15px;
     color: gray;
@@ -113,8 +110,11 @@ button{
     bottom: 40px;
     margin-left: 20px;
     width:80%;
-    align-items: center;
+    height: 20%;
+    align-items: end;
     text-decoration: none;
+    font-size: 15px;
+    margin-top: auto;
 
 }
 
@@ -126,12 +126,18 @@ button{
 }
 
 .login-info-bottom-login-button{
-
-    display: flex;
-    border-radius: 20px;
-
+    cursor:pointer;
+    background-color:white ;
+    color: rgb(68,182,234);
+    font-size: 15px;
+    padding: 10px;
+    border: 2px solid rgb(68,182,234);
+    border-radius: 12px;
+    box-shadow: 0 0 10px 0 rgb(180,180,180);
 }
 
-.link{
+.login-info-bottom-register .link,
+.login-info-bottom-login-button .link{
+    color:rgb(68,182,234);
     text-decoration: none;
 }

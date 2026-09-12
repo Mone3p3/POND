@@ -13,51 +13,34 @@ function Settings() {
                 <div className="ajustes-izquierda">
 
                     <div className="ajustes-icon-container">
-                        <img
-                            src="/images/Heart.png"
-                            alt="Icono de ajustes"
-                            className="ajustes-icon"
-                        />
+                        <Link to={'/'}>
+                            <img src="back_b.svg" alt="back" className="ajustes-icon"/>
+                        </Link>
+                        <img src="set_b.svg" alt="Icono de ajustes" className="ajustes-icon"/>
 
-                        <h3>Ajustes</h3>
+                        <span>Ajustes</span>
                     </div>
 
                     <div className="ajustes-section-container">
 
                         <div className="ajustes-section">
-                            <img
-                                src="/images/Kaw.gif"
-                                alt="Icono de tu cuenta"
-                                className="ajustes-section-icon"
-                            />
-                            <p>Tu cuenta</p>
+                            <img src="lock_b.svg" alt="Icono de tu cuenta" className="ajustes-section-icon"/>
+                            <span>Tu cuenta</span>
                         </div>
 
                         <div className="ajustes-section">
-                            <img
-                                src="/images/Kaw.gif"
-                                alt="Icono de privacidad"
-                                className="ajustes-section-icon"
-                            />
-                            <p>Privacidad</p>
+                            <img src="priv_b.svg" alt="Icono de privacidad" className="ajustes-section-icon"/>
+                            <span>Privacidad</span>
                         </div>
 
                         <div className="ajustes-section">
-                            <img
-                                src="/images/Kaw.gif"
-                                alt="Icono de notificaciones"
-                                className="ajustes-section-icon"
-                            />
-                            <p>Notificaciones</p>
+                            <img src="noti_b.svg" alt="Icono de notificaciones" className="ajustes-section-icon"/>
+                            <span>Notificaciones</span>
                         </div>
 
                         <div className="ajustes-section">
-                            <img
-                                src="/images/Kaw.gif"
-                                alt="Icono de accesibilidad"
-                                className="ajustes-section-icon"
-                            />
-                            <p>Accesibilidad</p>
+                            <img src="access_b.svg" alt="Icono de accesibilidad" className="ajustes-section-icon"/>
+                            <span>Accesibilidad</span>
                         </div>
 
                     </div>
@@ -74,31 +57,23 @@ function Settings() {
 
                         <div className="ajustes-info-container">
 
-                            <h3>Información de tu cuenta</h3>
+                            <span className='bold'>Información de tu cuenta</span>
 
-                            <div
-                                className="settings-search"
-                            >
-                                <img
-                                    src="/images/Spamton.png"
-                                    alt="Buscar"
-                                />
-
-                                <span className="texto-sub">
-                                    Buscar
-                                </span>
-                            </div>
+                            <label className="ajustes-info-busqueda">
+                                <input type='text'placeholder='Buscar'></input>
+                                <img src="lupa_b.svg" alt="Buscar"/>
+                            </label>
 
                         </div>
 
                         <div className="ajustes-section-container">
 
                             <div className="ajustes-section">
-                                <p>Tu información</p>
+                                <span>Tu información</span>
                             </div>
 
                             <div className="ajustes-section">
-                                <p>Cambiar contraseña</p>
+                                <span>Cambiar contraseña</span>
                             </div>
 
                         </div>

@@ -66,16 +66,16 @@ function Header({abrirCrear}) {
                 </div>
 
                 <div className="dropdown-menu-bottom">
-                    <div className="dropdown-menu-bottom-container"> 
+                    <Link to={"/login"} className="dropdown-menu-bottom-container"> 
                         <img src="logout.svg" alt="menu-icon" width="30" height="30" />
                         <span>Cerrar Sesión</span>
-                    </div>
+                    </Link>
                 </div>
             </div>
 
             <div className="header-bar">
                 <div className="leftContent">
-                    <div className="boton-menu-container">
+                    <label className="boton-menu-container">
                         <button onClick={() => setMenuAbierto(!menuAbierto)} className="boton-menu" id="boton-menu" aria-expanded="false">
                             <svg viewBox="0 0 25 20">
                                 <rect y="2" width="25" height="3" fill="white"></rect>
@@ -83,7 +83,7 @@ function Header({abrirCrear}) {
                                 <rect y="16" width="25" height="3" fill="white"></rect>
                             </svg>
                         </button>
-                    </div>
+                    </label>
 
                     <Link to={"/"} className="header-logo-container">
                         <img src="/images/Cato.gif" alt="Cosa bella" width="40px" style={{ marginLeft: '20px' }} />
@@ -93,7 +93,7 @@ function Header({abrirCrear}) {
 
                 <div className="centerContent">
                     <label className="search-bar">
-                        <input type='text'placeholder='Buscar'>
+                        <input type='text' placeholder='Buscar'>
                         </input>
                         <img src="lupa_w.svg" alt="SearchBar"/>
                     </label>

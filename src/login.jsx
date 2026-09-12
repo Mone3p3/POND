@@ -21,20 +21,20 @@ function Login() {
                 </p>
 
                 <div className="login-fill-box-container">
-                    <div className="login-fill-box">
-                        <input type="text" placeholder="Nombre"/>
-                    </div>
+                    <label className="login-fill-box">
+                        <input type="text" placeholder="Nombre"></input>
+                    </label>
 
-                    <div className="login-fill-box">
+                    <label className="login-fill-box">
                         <input type="password" placeholder="Contraseña"/>
-                    </div>
+                    </label>
 
-                    <span className="login-fill-box-placeholder-text"> ¿Olvidó la contraseña? </span>
+                    <span className="login-forgot"> ¿Olvidó la contraseña? </span>
                 </div>
 
                 <div className="login-info-bottom">
                     <div className="login-info-bottom-register">
-                        <span>¿No tienes cuenta? <Link className='link'>Regístrate</Link> </span>
+                        <span>¿No tienes cuenta? <Link className='link bold'>Regístrate</Link> </span>
                     </div>
 
                     <Link to={"/"} className="link">
