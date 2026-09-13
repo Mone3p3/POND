@@ -80,7 +80,6 @@ body{
 }
 
 .login-fill-box{
-
     border: 2px solid gray;
     border-radius: 10px;
     padding:12px 15px;
@@ -90,7 +89,34 @@ body{
     display: block;
     cursor:text;
     font-size: 15px;
+}
 
+.login-fill-box.box-dia{
+    width: 80px !important;
+}
+.login-fill-box.box-mes{
+    width: 240px !important;
+}
+.login-fill-box.box-año{
+    width: 120px !important;
+}
+
+select.login-fill-box{
+    color: black;
+    cursor: pointer;
+    outline: none;
+}
+
+.login-fill-box-fecha{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0;
+}
+
+.login-fill-box-fecha .login-fill-box{
+    width: 20%;
+    margin:0;
 }
 
 .login-fill-box input{

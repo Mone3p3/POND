@@ -22,11 +22,11 @@ function Login() {
 
                 <div className="login-fill-box-container">
                     <label className="login-fill-box">
-                        <input type="text" placeholder="Nombre"></input>
+                        <input type="text" placeholder="Usuario" name="user" autoComplete='name'></input>
                     </label>
 
                     <label className="login-fill-box">
-                        <input type="password" placeholder="Contraseña"/>
+                        <input type="password" placeholder="Contraseña" name="password" autoComplete='current-password'/>
                     </label>
 
                     <span className="login-forgot"> Olvidé la contraseña </span>
