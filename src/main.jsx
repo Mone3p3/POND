@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './css/index.css'
 import App from './App.jsx'
 import Login from './login.jsx';
+import Registro from './registro.jsx';
 import Settings from './settings.jsx';
 import NotFoundPage from './NotFoundPage.jsx';
 import Layout from './layout.jsx';
@@ -15,6 +16,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 const router = createBrowserRouter([
     {path:"/", element: <Layout><App/></Layout>},
     {path:"/login", element: <Login/>},
+    {path:"/registro", element: <Registro/>},
     {path:"/settings", element: <Settings/>},    
     {path:"*", element: <NotFoundPage/>}
 ]);

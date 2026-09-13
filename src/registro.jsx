@@ -1,7 +1,7 @@
 import './css/login.css';
 import { Link } from 'react-router-dom';
 
-function Login() {
+function Registro() {
 
     return (
         <div className="login-container">
@@ -17,10 +17,18 @@ function Login() {
                 <img src="/images/Heart.png" alt="Logo"/>
 
                 <p className="login-text-login">
-                    Inicio de sesión
+                    Regístrate
                 </p>
 
                 <div className="login-fill-box-container">
+                    <label className="login-fill-box">
+                        <input type="text" placeholder="Correo"></input>
+                    </label>
+                    
+                    <label className="login-fill-box">
+                        <input type="date" placeholder="Fecha"></input>
+                    </label>
+
                     <label className="login-fill-box">
                         <input type="text" placeholder="Nombre"></input>
                     </label>
@@ -29,17 +37,20 @@ function Login() {
                         <input type="password" placeholder="Contraseña"/>
                     </label>
 
-                    <span className="login-forgot"> Olvidé la contraseña </span>
+                    <label className="login-fill-box">
+                        <input type="password" placeholder="Confirmar contraseña"/>
+                    </label>
+
                 </div>
 
                 <div className="login-info-bottom">
                     <div className="login-info-bottom-register">
-                        <span>¿No tienes cuenta? <Link to={'/registro'} className='link bold'>Regístrate</Link> </span>
+                        <span>¿Ya tienes una cuenta? <Link to={'/login'} className='link bold'>Inicia sesión</Link> </span>
                     </div>
 
                     <Link to={"/"} className="link">
                         <button className='login-info-bottom-login-button'>
-                            <span>Iniciar sesión</span>
+                            <span>Registrarse</span>
                         </button>
                     </Link>
                 </div>
@@ -48,5 +59,5 @@ function Login() {
     );
 }
 
-export default Login;
+export default Registro;
 

@@ -23,22 +23,22 @@ function Header({abrirCrear}) {
             document.removeEventListener("mousedown", handler);
         };
 
-    });
+    },[]);
 
     
     return(
         <header id="head">
-            <div className={`dropdown-menu ${menuAbierto ? "show" : ""}`} id="menu" ref={menuRef}>
-                <div className="dropdown-menu-cerrar">
+            <div className={`menu-lateral ${menuAbierto ? "show" : ""}`} id="menu" ref={menuRef}>
+                <div className="menu-lateral-cerrar">
                     <div className="cerrar">
                         <span>x</span>
                     </div>
                 </div>
-                <div className='dropdown-menu-menu'>
-                    <h5 className='bold' style={{display: 'flex', justifyContent: 'center'}}>Menú</h5>
+                <div className='menu-lateral-menu'>
+                    <h5 className='bold'>Menú</h5>
                 </div>
                 
-                <div className="dropdown-menu-center">
+                <div className="menu-lateral-center">
                     <button className="menu-section">
                         <img src="trend_b.svg" alt="menu-icon" width="30" height="30" />
                         <span>Tendencias</span>
@@ -65,8 +65,8 @@ function Header({abrirCrear}) {
                     </Link>
                 </div>
 
-                <div className="dropdown-menu-bottom">
-                    <Link to={"/login"} className="dropdown-menu-bottom-container"> 
+                <div className="menu-lateral-bottom">
+                    <Link to={"/login"} className="menu-lateral-bottom-container"> 
                         <img src="logout.svg" alt="menu-icon" width="30" height="30" />
                         <span>Cerrar Sesión</span>
                     </Link>

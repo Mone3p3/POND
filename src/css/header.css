@@ -42,7 +42,7 @@
 
             }
 
-            .dropdown-menu{
+            .menu-lateral{
 
                 display: flex;
                 flex-direction: column;
@@ -60,42 +60,46 @@
 
             }
 
-            .dropdown-menu.show{
-
-                display: flex;
-                position: absolute;
+            .menu-lateral.show{
                 left: -1px;
                 opacity: 1;
-
             }
 
 
-            .dropdown-menu-cerrar{
+            .menu-lateral-cerrar{
 
                 width: 100%;
                 font-weight: bold;
-                font-size: 1.2em;
+                font-size: 1em;
                 justify-self: start;
                 height: 10%;
                 display:flex;
                 align-items: center;
-                
+                color: white;                
 
             }
 
-            .dropdown-menu-menu{
+            .menu-lateral-menu{
+                display: flex;
+                justify-content: center;
+                color: white;
             }
 
             .cerrar{
                 margin-left: auto;
+                color: white;
+                border:none;
+                padding: 0;
+                width: 20px;
+                height: 20px;
             }
 
 
-            .dropdown-menu-center{
+            .menu-lateral-center{
 
                 justify-self: center;
                 height: 60%;
-                padding: 20px 40px;
+                padding: 80px 40px;
                 box-sizing: border-box;       
                 display: flex;  
                 flex-direction: column;
@@ -114,7 +118,8 @@
                 margin: 10px 0;
                 font-size:16px;
                 font-weight: bold;
-                color: white;
+                background-color: white;
+                color: black;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
@@ -123,7 +128,7 @@
                 
             }
 
-            .dropdown-menu-bottom{
+            .menu-lateral-bottom{
 
                 display: flex;
                 align-items: center;
@@ -135,7 +140,7 @@
 
             }
 
-            .dropdown-menu-bottom-container{
+            .menu-lateral-bottom-container{
 
                 display: flex;
                 align-items: center;
