@@ -1,0 +1,22 @@
+
+.category-btn{
+    border:none;
+    padding: 20px;
+    margin: 0;
+}
+.category-btn.seleccionado {
+    font-weight: bold;
+    color: var(--nar);
+}
+
+.category-selected-icon{
+    display: none;
+}
+
+.category-selected-icon.seleccionado{
+    display: block;
+    background-color: var(--nar);
+    width: 40%;
+    height: 10%;
+    margin: auto;
+}

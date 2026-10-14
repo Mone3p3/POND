@@ -1,5 +1,5 @@
 
-
+import { Link } from "react-router-dom";
 
 const posts = [
     {
@@ -34,27 +34,27 @@ function LandingPosts(){
         <div>
             {posts.map((post, index) => (
                 <div className="post-container" key={index}>
-                    <div className="post-user-container">
+                    <Link to={'/perfilAjeno'} className="post-user-container">
                         <div className="user-image-small">
                             <img src={post.userImage} alt="user-icon"/>
                         </div>
 
                         <span className="username"> {post.username} </span>
 
-                        <span className="arroba"> {post.arroba} </span>
+                        <span className="arroba"> {post.arroba} </span>                       
+                    </Link>
 
-                        <div className="post-options">
-                            <img src="dots_v.svg" alt="post-options"/>
+                    <Link to={'/verPost'} className="post-area">
+
+                        <div className="">
+                            <p className="post-text"> {post.texto} </p>
                         </div>
-                    </div>
 
-                    <div>
-                        <p className="post-text"> {post.texto} </p>
-                    </div>
+                        <Link to={'/perfilAjeno'} className="post-image">
+                            <img src={post.imagen} alt="post-image"/>
+                        </Link>
 
-                    <div className="post-image">
-                        <img src={post.imagen} alt="post-image"/>
-                    </div>
+                    </Link>
 
                     <div className="post-bottom-container">
                         <div className="post-bottom-container-likes">

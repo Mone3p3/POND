@@ -29,40 +29,33 @@ function Header({abrirCrear}) {
     return(
         <header id="head">
             <div className={`menu-lateral ${menuAbierto ? "show" : ""}`} id="menu" ref={menuRef}>
-                <div className="menu-lateral-cerrar">
-                    <div className="cerrar">
-                        <span>x</span>
-                    </div>
-                </div>
-                <div className='menu-lateral-menu'>
-                    <h5 className='bold'>Menú</h5>
-                </div>
                 
                 <div className="menu-lateral-center">
-                    <button className="menu-section">
-                        <img src="trend_b.svg" alt="menu-icon" width="30" height="30" />
-                        <span>Tendencias</span>
-                    </button>
+                    
+                    <Link to={'/'} className="menu-section">
+                        <img src="home_b.svg" alt="menu-icon" width="30" height="30" />
+                        <span>Inicio</span>
+                    </Link>
 
-                    <div className="menu-section">
-                        <img src="heart_b.svg" alt="menu-icon" width="30" height="30" />
-                        <span>Quacks</span>
-                    </div>
-
-                    <div className="menu-section"> 
+                    <Link to={'/busqueda'} className="menu-section">
                         <img src="flw_b.svg" alt="menu-icon" width="30" height="30" />
                         <span>Siguiendo</span>
-                    </div>
+                    </Link>
 
-                    <div className="menu-section"> 
+                    
+                    <Link to={'/perfil'} className="menu-section"> 
                         <img src="acc_b.svg" alt="menu-icon" width="30" height="30" />
                         <span>Perfil</span>
-                    </div>
+                    </Link>
                 
                     <Link to={'/settings'} className="menu-section">
                         <img src="set_b.svg" alt="menu-icon" width="30" height="30" />
                         <span>Ajustes</span>
                     </Link>
+
+                    <div className="menu-section bold d-flex justify-content-center"> 
+                        <span>+ Publicar</span>
+                    </div>
                 </div>
 
                 <div className="menu-lateral-bottom">
@@ -86,8 +79,8 @@ function Header({abrirCrear}) {
                     </label>
 
                     <Link to={"/"} className="header-logo-container">
-                        <img src="/images/Cato.gif" alt="Cosa bella" width="40px" style={{ marginLeft: '20px' }} />
-                        <span style={{color: 'bisque', marginRight: '20px', marginLeft: '20px', fontSize: '25px', fontWeight: 'bold'}}>POND</span>
+                        <span className='logo'>POND</span>
+                        <img src="/images/PondLogo.png" alt="Cosa bella" width="40px"/>
                     </Link>       
                 </div>
 
@@ -95,7 +88,9 @@ function Header({abrirCrear}) {
                     <label className="search-bar">
                         <input type='text' placeholder='Buscar'>
                         </input>
-                        <img src="lupa_w.svg" alt="SearchBar"/>
+                        <Link to={"/busqueda"}>
+                            <img src="lupa_w.svg" alt="SearchBar"/>
+                        </Link>
                     </label>
                 </div>
 
@@ -103,9 +98,14 @@ function Header({abrirCrear}) {
                     <button className="publicar-button bold" onClick={abrirCrear}>
                         <span>+ Publicar</span>
                     </button>
+
                     
-                    <Link to={"/login"} className="user-image-small">
-                        <img src="/images/Katana.jpeg" alt="Cosa bella" style={{ objectFit: 'cover' }} />
+                    <Link to={"/perfil"} className='user-icon-header d-flex align-items-center ps-4'>
+                        <div className='mh-100 d-flex flex-column pt-1'>
+                            <span className='bold lh-1'>Patatero</span>
+                            <span>@aloba</span>
+                        </div>
+                        <img className='user-image-small' src="/images/estanque2.jpg" alt="Cosa bella" style={{ objectFit: 'cover' }} />
                     </Link>
                 </div>
             </div>

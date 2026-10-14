@@ -2,6 +2,9 @@
 import './css/App.css'
 import './css/landing.css'
 import LandingPosts from './landingPosts'
+import DiscoverUsers from './discoverUsers'
+import FeaturedUsers from './featuredUsers'
+import TwitchStream from './twitch'
 
 
 
@@ -15,11 +18,11 @@ function App() {
 
         <div className="main-izquierda">
         </div>
-
-        <div>
+        {/*
+       <div>
             <hr className="separador-vertical" />
         </div>
-
+        */}
         <div className="main-central">
             <LandingPosts/>
         </div>
@@ -32,32 +35,23 @@ function App() {
 
 
         <div className="main-derecha">
+            
+            <TwitchStream/>
 
-            <br/>
-
-            <p className="texto-main">DESCUBRE</p>
-
-
-            <div className="discover-container">
-                <p className="texto-sub">Personas con gustos similares</p>
-
-                <div className="discover-user-container">
-                    <div className="user-image-small">
-                        <img src="images/Katana.jpeg" alt="user-icon"/>
-                    </div>
-                    
-                    <div className="discover-user-name-container">
-                        <span class="username">KatanaPhighting</span>
-                        <p class="arroba">Descripcion</p>
-                    </div>
-
-                    <div className="post-options">
-                        <img src="dots_v.svg" alt="options"/>
-                    </div>
-                </div>
+            <div className="apoya-container">
+                <p className="texto-h">USUARIOS DESTACADOS</p>
+                <FeaturedUsers/>
             </div>
 
             <br/>
+
+            <div className="discover-container">
+                <p className="texto-h">DESCUBRE</p>
+                <DiscoverUsers/>
+            </div>
+
+            <br/>
+            {/*
             <p className="texto-main">TENDENCIAS</p>
 
             <div className="tendencia-container">
@@ -76,6 +70,7 @@ function App() {
                     </div>
                 </div>
             </div>
+            */}
         </div>
     </div>
     </>

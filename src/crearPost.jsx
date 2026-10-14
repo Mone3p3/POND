@@ -15,8 +15,8 @@ function CrearPost({cerrarCrear}){
                         <span className="arroba">@DefinitelyNotSlingshot</span>
                     </div>
 
-                    <button className='cerrar' onClick={cerrarCrear}>
-                        X
+                    <button className='btn-close' onClick={cerrarCrear}>
+                        
                     </button>
                 </div>
 
@@ -39,7 +39,7 @@ function CrearPost({cerrarCrear}){
                         <img src='poll_b.svg' alt='post-add-poll'></img>
                     </div>
                     <div className='crear-bottom-right'>
-                        <button className='publicar-button'>
+                        <button className='publicar-button-crear'>
                             <span>Publicar</span>
                         </button>
                     </div>

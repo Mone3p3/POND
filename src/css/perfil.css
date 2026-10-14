@@ -1,0 +1,143 @@
+
+
+
+
+.lateral-pf{
+    flex:.5;
+    background-color: var(--bg);
+    justify-content: center;
+    padding-top: 20px;
+    display: flex;
+}
+
+.lateral-pf #back-perfil,
+.lateral-pf #category{
+    position: fixed;
+}
+
+
+.banner{
+    width:100%;
+    aspect-ratio:1047/205;
+    border-radius:43px;
+    object-fit:cover;
+    display:block
+}
+
+.pfp{
+    position:absolute;
+    left:38px;
+    bottom:-58px;
+    width:132px;
+    height:132px;
+    border-radius:999px;
+    border:3px solid var(--bg)
+}
+
+.user-desc{
+    width: 100%;
+    max-width:1047px;
+    margin:75px auto 0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:24px;
+    align-items:flex-start;
+    justify-content:space-between;
+    padding:0 8px
+}
+
+
+.user-desc-left{
+    min-width:260px;
+    margin-left: 40px;
+    width: 60%;
+}
+
+.user-desc-name{
+    font-weight:700;
+    font-size:1.2pc;
+    color: var(--text);
+}
+
+.user-desc-at{
+    color:var(--text-sub);
+    font-weight:300;
+    font-size:1.1pc;
+    margin:0 0 8px
+}
+
+.user-desc-bio{
+    color:var(--text-sub);
+    font-size:1.1pc;
+    margin:0;
+    width: 100%;
+    background-color: var(--bg);
+    line-height: 1.2;
+}
+
+.user-desc-right{
+    display:flex;
+    align-items:center;
+    margin-right: 40px;
+    font-size: 1.1pc;
+    line-height: 1.2;
+}
+
+.user-desc-meta{
+    color:var(--text-sub);opacity:.71;text-align:right;font-size:1.1pc;font-weight: lighter;
+}
+
+.edit-btn{
+    border-radius:67px;
+    border:1.5px solid var(--blu);
+    background:var(--bg);
+    color:var(--blu);
+    padding:10px 15px;
+    cursor:pointer;
+    font-weight:500;
+    font-size:1pc;
+    position: absolute;
+    right: 30px; 
+    bottom: -18px; 
+    box-shadow: 0 0 0 8px var(--bg);
+}
+
+.follow-profile-btn{
+    border-radius:67px;
+    border:1.5px solid var(--nar);
+    background:var(--bg);
+    color:var(--nar);
+    padding:10px 15px;
+    cursor:pointer;
+    font-weight:500;
+    font-size:1pc;
+    position: absolute;
+    right: 30px; 
+    bottom: -18px; 
+    box-shadow: 0 0 0 8px var(--bg);
+}
+
+.follow-btn{
+    border-radius: 67px;
+    border: 0px solid var(--bg);
+    background: var(--nar);
+    color: var(--text-in);
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1pc;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 0 8px 1px var(--shad);
+    width: 110px;
+}
+
+.edit-btn:hover{
+    background-color: var(--blu);
+    color: var(--text-in);
+}
+
+
+.follow-profile-btn:hover{
+    background-color: var(--nar);
+    color: var(--text-in);
+}

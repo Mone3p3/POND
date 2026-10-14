@@ -1,13 +1,12 @@
 
 import './css/settings.css';
 import { Link } from 'react-router-dom';
-import Header from './header';
 
 function Settings() {
 
     return (
         <>
-            <Header/>
+            
             <div className="background">
 
                 <div className="ajustes-izquierda">

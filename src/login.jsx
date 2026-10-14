@@ -19,30 +19,33 @@ function Login() {
                 <p className="login-text-login">
                     Inicio de sesión
                 </p>
+                
+                <form>
 
-                <div className="login-fill-box-container">
-                    <label className="login-fill-box">
-                        <input type="text" placeholder="Usuario" name="user" autoComplete='name'></input>
-                    </label>
+                    <div className="login-fill-box-container">
+                        <label className="login-fill-box">
+                            <input type="text" placeholder="Usuario" name="user" required></input>
+                        </label>
 
-                    <label className="login-fill-box">
-                        <input type="password" placeholder="Contraseña" name="password" autoComplete='current-password'/>
-                    </label>
+                        <label className="login-fill-box">
+                            <input type="password" placeholder="Contraseña" name="password" autoComplete='current-password'/>
+                        </label>
 
-                    <span className="login-forgot"> Olvidé la contraseña </span>
-                </div>
-
-                <div className="login-info-bottom">
-                    <div className="login-info-bottom-register">
-                        <span>¿No tienes cuenta? <Link to={'/registro'} className='link bold'>Regístrate</Link> </span>
+                        <span className="login-forgot"> Olvidé la contraseña </span>
                     </div>
 
-                    <Link to={"/"} className="link">
-                        <button className='login-info-bottom-login-button'>
-                            <span>Iniciar sesión</span>
-                        </button>
-                    </Link>
-                </div>
+                    <div className="login-info-bottom">
+                        <div className="login-info-bottom-register">
+                            <span>¿No tienes cuenta? <Link to={'/registro'} className='link bold'>Regístrate</Link> </span>
+                        </div>
+
+                        <Link to={"/"} className="link">
+                            <button className='login-info-bottom-login-button' type='submit'>
+                                <span>Iniciar sesión</span>
+                            </button>
+                        </Link>
+                    </div>
+                </form>
             </div>
         </div>
     );
