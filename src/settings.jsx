@@ -1,5 +1,10 @@
 
 import './css/settings.css';
+import './css/login.css';
+import SettingsCuenta from './settingsCuenta';
+import SettingsAccesibilidad from './settingsAccesibilidad';
+import SettingsInfo from './settingsInfo';
+import SettingsContraseña from './settingsContraseña';
 import { Link } from 'react-router-dom';
 
 function Settings() {
@@ -8,6 +13,7 @@ function Settings() {
         <>
             
             <div className="background">
+                
 
                 <div className="ajustes-izquierda">
 
@@ -28,16 +34,6 @@ function Settings() {
                         </div>
 
                         <div className="ajustes-section">
-                            <img src="priv_b.svg" alt="Icono de privacidad" className="ajustes-section-icon"/>
-                            <span>Privacidad</span>
-                        </div>
-
-                        <div className="ajustes-section">
-                            <img src="noti_b.svg" alt="Icono de notificaciones" className="ajustes-section-icon"/>
-                            <span>Notificaciones</span>
-                        </div>
-
-                        <div className="ajustes-section">
                             <img src="access_b.svg" alt="Icono de accesibilidad" className="ajustes-section-icon"/>
                             <span>Accesibilidad</span>
                         </div>
@@ -52,32 +48,10 @@ function Settings() {
 
                 <div className="ajustes-derecha">
 
-                    <div className="ajustes-info-cuenta">
-
-                        <div className="ajustes-info-container">
-
-                            <span className='bold'>Información de tu cuenta</span>
-
-                            <label className="ajustes-info-busqueda">
-                                <input type='text'placeholder='Buscar'></input>
-                                <img src="lupa_b.svg" alt="Buscar"/>
-                            </label>
-
-                        </div>
-
-                        <div className="ajustes-section-container">
-
-                            <div className="ajustes-section">
-                                <span>Tu información</span>
-                            </div>
-
-                            <div className="ajustes-section">
-                                <span>Cambiar contraseña</span>
-                            </div>
-
-                        </div>
-
-                    </div>
+                    <SettingsCuenta/>
+                    <SettingsAccesibilidad/>
+                    <SettingsInfo/>
+                    <SettingsContraseña/>
 
                 </div>
 

@@ -16,7 +16,7 @@ function App() {
 
       <div className="background">
 
-        <div className="main-izquierda">
+        <div className="lateral-pf">
         </div>
         {/*
        <div>

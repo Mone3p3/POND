@@ -14,9 +14,12 @@ function Registro() {
             </div>
 
             <div className="login-info">
-                <img src="/images/Heart.png" alt="Logo"/>
+                <div>
+                    <img src="/images/PondLogo.png" alt="Logo"/>
+                    <span className='logo-login'>POND</span>
+                </div>
 
-                <p className="login-text-login">
+                <p className="login-text-login mt-4">
                     Regístrate
                 </p>
 

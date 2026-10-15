@@ -12,15 +12,18 @@ function Header({abrirCrear}) {
     useEffect(() => {
 
         let handler = (e)=>{
-            if (!menuRef.current.contains(e.target)) {
+            if (!menuRef.current.contains(e.target) && !e.target.closest('.boton-menu-container')){
+                setMenuAbierto(false);
+            }
+            if (e.target.closest ('.menu-section')){
                 setMenuAbierto(false);
             }
         };
 
-        document.addEventListener("mousedown", handler);
+        document.addEventListener("click", handler);
 
         return () => {
-            document.removeEventListener("mousedown", handler);
+            document.removeEventListener("click", handler);
         };
 
     },[]);
@@ -100,12 +103,12 @@ function Header({abrirCrear}) {
                     </button>
 
                     
-                    <Link to={"/perfil"} className='user-icon-header d-flex align-items-center ps-4'>
-                        <div className='mh-100 d-flex flex-column pt-1'>
+                    <Link to={"/perfil"} className='user-icon-header d-flex align-items-center ps-4 ms-auto'>
+                        <div className='d-flex flex-column pt-1 text-end'>
                             <span className='bold lh-1'>Patatero</span>
                             <span>@aloba</span>
                         </div>
-                        <img className='user-image-small' src="/images/estanque2.jpg" alt="Cosa bella" style={{ objectFit: 'cover' }} />
+                        <img className='user-image-small' src="/images/estanque2.jpg" alt="Cosa bella" />
                     </Link>
                 </div>
             </div>

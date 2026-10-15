@@ -46,6 +46,14 @@ body{
 
 }
 
+.logo-login{
+    color:var(--text);
+    font-size: 25px;
+    font-weight: bold;
+    font-size: 2.5pc;
+    margin-left: 20px;
+}
+
 .login-info{
 
     display: block;

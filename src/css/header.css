@@ -13,12 +13,13 @@
         }
 
             .logo{
-                color:white;
+                color:var(--text-in);
                 margin-right: 20px;
                 margin-left: 20px;
                 font-size: 25px;
                 font-weight: bold;
             }
+
 
             .boton-menu-container{
                 width: 40px;

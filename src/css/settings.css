@@ -140,3 +140,17 @@ html,body{
     font-weight: normal;
 }
 
+
+.access-btn{
+    border-radius:20px;
+    border:1.5px solid var(--nar);
+    background:var(--bg);
+    color:var(--nar);
+    padding:20px 30px;
+    margin:20px 20px;
+    margin-riht: 20px;
+    cursor:pointer;
+    font-weight:500;
+    font-size:1pc;
+    box-shadow: 0 0 0 8px var(--bg);
+}

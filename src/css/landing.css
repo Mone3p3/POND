@@ -10,6 +10,26 @@
         ul{
             list-style-type: none;
         }
+
+        /* width */
+        ::-webkit-scrollbar {
+        width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        }
         
         button {
             font-family: 'Montserrat', -apple-system, 'Roboto', Helvetica, sans-serif;
@@ -309,12 +329,14 @@
 
         .main-derecha{
 
-            padding:30px; 
             flex:2; 
             width: 500px; 
-            height: 2000px; 
-            display: block;
-
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            position:sticky;
+            margin-top:20px;
+            top:0;
         }
 
             .discover-container{
@@ -342,6 +364,10 @@
 
             .discover-user-name-container{
                 display: block;
+            }
+
+            .main-derecha iframe{
+                margin-bottom: 30px;
             }
 
 
@@ -380,6 +406,14 @@
                 padding-right: 40px;
                 line-height: 1.4pc;
 
+            }
+
+            .twitch-ratio{
+                width: 95%;
+                aspect-ratio: 8 / 6;
+                height: auto;
+                border: none;
+                display: block;
             }
         
 
