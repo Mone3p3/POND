@@ -10,6 +10,10 @@
     display: flex;
 }
 
+.lateral-pf.ajustes-base{
+    flex:.25;
+}
+
 .lateral-pf #back-perfil,
 .lateral-pf #category{
     position: fixed;

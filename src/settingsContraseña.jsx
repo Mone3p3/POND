@@ -5,14 +5,14 @@ function SettingsContraseña(){
     return(
         <div className="ajustes-info-cuenta">
             <div className="ajustes-info-container">
-                <span className='bold'>Cambiar Contraseña</span>
+                <span className='texto-main bold'>Cambiar Contraseña</span>
             </div>
 
             <div className="" >
               <div className="">
                 <form>
                   <div className="">
-                    <label for="current-password" className="">Contraseña actual</label>
+                    <label for="current-password" className='texto-main bold'>Contraseña actual</label>
                     <input
                       type="password"
                       id="current-password"
@@ -21,7 +21,7 @@ function SettingsContraseña(){
                     />
                   </div>
                   <div className="">
-                    <label for="new-password" className="">Nueva contraseña</label>
+                    <label for="new-password" className='texto-main bold'>Nueva contraseña</label>
                     <input
                       type="password"
                       id="new-password"
@@ -30,7 +30,7 @@ function SettingsContraseña(){
                     />
                   </div>
                   <div className="">
-                    <label for="confirm-password" className="">Confirme la nueva contraseña</label>
+                    <label for="confirm-password" className='texto-main bold'>Confirme la nueva contraseña</label>
                     <input
                       type="password"
                       id="confirm-password"

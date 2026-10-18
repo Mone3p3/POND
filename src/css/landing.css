@@ -11,6 +11,16 @@
             list-style-type: none;
         }
 
+        select {
+            color: var(--text);
+            background-color: var(--bg);
+        }
+
+        select option {
+            color: var(--text);
+            background-color: var(--bg);
+        }
+
         /* width */
         ::-webkit-scrollbar {
         width: 10px;
@@ -168,7 +178,8 @@
         .background{
             display:flex;    
             background-color: var(--bg);
-            height: 100%;
+                min-height: 100vh;
+
         }
 
         .main-izquierda{
@@ -203,6 +214,10 @@
                 margin-top: 20px; 
                 overflow: hidden;
                 line-height: 1.2;
+            }
+
+            .user-container.ver-post{
+                width: 90%;
             }
 
             .post-container{
@@ -299,7 +314,7 @@
                 width: 100%;
             }
 
-            .post-bottom-container img{
+            .post-bottom-container svg{
                 width: 30px; 
                 height: 30px; 
                 margin-right: 20px;
@@ -417,7 +432,11 @@
             }
         
 
+/* --- SVG -------------------------------------------------------- */
 
+            .svg-general{
+                fill: var();
+            }
         
 
 

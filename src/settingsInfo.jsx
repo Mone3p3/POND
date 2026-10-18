@@ -7,14 +7,14 @@ function SettingsInfo(){
     return(
         <div className="ajustes-info-cuenta">
             <div className="ajustes-info-container">
-                <span className='bold'>Información de tu cuenta</span>
+                <span className='texto-main bold'>Información de tu cuenta</span>
             </div>
 
             <div className="" >
               <div className="">
                 <form>
                   <div className="">
-                    <label for="username" className="">Nombre de usuario</label>
+                    <label for="username" className='texto-main bold'>Nombre de usuario</label>
                     <input
                       type="text"
                       id="username"
@@ -24,7 +24,7 @@ function SettingsInfo(){
                   </div>
                  
                   <div className="">
-                    <label for="email" className="">Correo</label>
+                    <label for="email" className='texto-main bold'>Correo</label>
                     <input
                       type="email"
                       id="email"
@@ -34,7 +34,7 @@ function SettingsInfo(){
                   </div>
 
                   <div className="">
-                    <label for="country" className="">País</label>
+                    <label for="country" className='texto-main bold'>País</label>
                     <input
                       type="text"
                       id="country"
@@ -44,7 +44,7 @@ function SettingsInfo(){
                   </div>
                   
                   <div className="ajustes2-form-group">
-                    <label for="gender" className="form-label">Género</label>
+                    <label for="gender" className='texto-main bold'>Género</label>
                     <div className="select-wrapper">
                       <select id="gender" className="login-fill-box">
                         <option value="hombre" selected>Hombre</option>

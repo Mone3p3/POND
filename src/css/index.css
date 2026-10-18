@@ -18,10 +18,7 @@
   ANTIGUO GRADIANTE
   linear-gradient(to bottom, rgb(67, 123, 245)10%, rgb(68, 182, 234), rgb(156, 212, 227))
   */
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
-  --sans: 'Montserrat', sans-serif;
+    --sans: 'Montserrat', sans-serif;
   --heading: 'Montserrat', sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
@@ -41,19 +38,44 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
+  :root:not([data-theme]) {
+    --text: #fff;
     --bg: #16171d;
     --border: #2e303a;
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    --shad: rgb(90, 90, 90);
+    --menu: linear-gradient(to bottom, #000);
+    --header: linear-gradient(to right, #000);
   }
 
   #social .button-icon {
     filter: invert(1) brightness(2);
   }
 }
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --text: #000000;
+  --text-sub: #808080;
+  --text-in: #fff;
+  --bg: #fff;
+  --border: #000000;
+  --shad: rgb(180, 180, 180);
+  --menu: linear-gradient(to bottom, rgb(67, 123, 245) 10%, rgb(68, 182, 234), rgb(156, 212, 227));
+  --header: linear-gradient(to right, rgb(67, 123, 245) 10%, rgb(68, 182, 234), rgb(156, 212, 227));
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --text: #fff;
+  --bg: #16171d;
+  --border: #2e303a;
+  --shad: rgb(90, 90, 90);
+  --menu: linear-gradient(to bottom, #000);
+  --header: linear-gradient(to right, #000);
+}
+
+
+
 
 body {
   margin: 0;

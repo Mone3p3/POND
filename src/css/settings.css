@@ -12,8 +12,7 @@ html,body{
 .ajustes-izquierda{
 
     display: flex;
-    flex:1;
-    height: 100%;
+    flex:3;
     width: 100%;
     padding: 40px;
     box-sizing: border-box;
@@ -62,6 +61,7 @@ html,body{
     width: 95%;
     height: 80px;
     gap: 10px;
+    cursor: pointer;
 
 }
 
@@ -91,12 +91,10 @@ html,body{
 .ajustes-derecha{
 
     display: flex;
-    flex:1;
-    height: 100%;
+    flex:3;
     width: 100%;
-    padding:40px;
+    padding:40px 40px 40px 0;
     flex-direction: column;
-
 }
 
 .ajustes-info-cuenta{
@@ -145,12 +143,19 @@ html,body{
     border-radius:20px;
     border:1.5px solid var(--nar);
     background:var(--bg);
-    color:var(--nar);
+    color:var(--text);
     padding:20px 30px;
     margin:20px 20px;
-    margin-riht: 20px;
+    margin-right: 20px;
     cursor:pointer;
     font-weight:500;
     font-size:1pc;
     box-shadow: 0 0 0 8px var(--bg);
 }
+
+.access-btn.seleccionado{
+    border:1.5px solid var(--nar);
+    background:var(--nar);
+    color:var(--text-in);
+}
+

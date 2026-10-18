@@ -11,7 +11,7 @@
 
 .crear-container{
     width: 100%;
-    height: 100%;
+    height: 50%;
     background-color: var(--bg);
     border-radius: 20px;
     box-sizing: border-box;
@@ -20,6 +20,11 @@
     overflow: auto;
     box-shadow: 0px 0px 8px 1px var(--shad);
 }
+
+.crear-container.con-imagen{
+    height: 100%;
+}
+
 
 .crear-container hr{
     margin: 10px;
@@ -32,6 +37,8 @@
     padding-bottom: 0;
 }
 
+
+
 .crear-content{
     flex:1;
     overflow-y: auto;
@@ -43,13 +50,11 @@
 
 .crear-text textarea{
     background-color: var(--bg);
-    width: 80%;
+    width: 100%;
     border:none;
     outline: none;
     color:var(--text);
-    field-sizing: content;
     resize: none;
-    min-height: 3lh;
     max-height: 8lh;
 }
 
@@ -70,7 +75,6 @@
 
 .crear-bottom{
     width: 100%;
-    height: 10%;
     position: relative;
     bottom: 0;
     left: 0;
@@ -81,7 +85,7 @@
     align-items: center;
 }
 
-.crear-bottom-left img{
+.crear-bottom-left svg{
     width: 30px;
     margin:0 10px;
 }
@@ -110,4 +114,46 @@
     font-size: 15px;
     font-weight: bold;
     box-shadow: 0 0 8px 0px var(--shad);
+}
+
+.poll-text{
+    color: var(--text); 
+    font-size: 1.1pc; 
+    margin-bottom: 10px; 
+}
+
+.poll-option{
+    display: flex;
+    align-items: center;
+    background-color: var(--bg);
+    border: 1px solid var(--border-gr);
+    border-radius: 15px;
+    margin: 0 20% 20px 10%;
+}
+
+.poll-option textarea{
+    background-color: var(--bg);
+    width: 100%;
+    outline: none;
+    field-sizing: content;
+    resize: none;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.poll-container{
+    margin: 20px 20% 20px 10%;
+}
+
+.poll-eliminar-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg);
+    border: 1px solid red;
+    color: red;
+    border-radius: 15px;
+    margin: 0 20% 20px 10%;
+    padding: 10px;
 }

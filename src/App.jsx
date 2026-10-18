@@ -5,7 +5,7 @@ import LandingPosts from './landingPosts'
 import DiscoverUsers from './discoverUsers'
 import FeaturedUsers from './featuredUsers'
 import TwitchStream from './twitch'
-
+import MoverAlInicio from './moverAlInicio'
 
 
 function App() {
@@ -13,8 +13,9 @@ function App() {
   return (
     <>
 
+        <MoverAlInicio/>
 
-      <div className="background">
+        <div className="background">
 
         <div className="lateral-pf">
         </div>
@@ -39,14 +40,14 @@ function App() {
             <TwitchStream/>
 
             <div className="apoya-container">
-                <p className="texto-h">USUARIOS DESTACADOS</p>
+                <p className="texto-main bold">USUARIOS DESTACADOS</p>
                 <FeaturedUsers/>
             </div>
 
             <br/>
 
             <div className="discover-container">
-                <p className="texto-h">DESCUBRE</p>
+                <p className="texto-main bold">DESCUBRE</p>
                 <DiscoverUsers/>
             </div>
 
