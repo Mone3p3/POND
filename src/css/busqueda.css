@@ -20,3 +20,36 @@
     height: 10%;
     margin: auto;
 }
+
+.search-container{
+    border-radius: 15px; 
+    background-color: var(--bg); 
+    width: 800px; 
+    padding: 10px 0;
+    max-height: 2000px; 
+    overflow: hidden;
+    line-height: 1.2;
+}
+
+.search-user-container{
+
+    display: flex; 
+    align-items: center; 
+    width: 100%; 
+    padding: 10px 0;
+
+}
+
+
+
+.reaccion-container {
+    position: relative;
+}
+
+.reaccion-container .emoji-picker-container {
+    position: absolute;
+    bottom: 100%;
+    left: -150%;
+    z-index: 1000;
+    margin-right: 5px;
+}

@@ -63,6 +63,8 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--bg);
+    color: var(--text);
 
 }
 
@@ -150,7 +152,7 @@ select.login-fill-box{
     margin-left: 20px;
     width:80%;
     height: 20%;
-    align-items: end;
+    align-items: center;
     text-decoration: none;
     font-size: 15px;
     margin-top: auto;
@@ -169,10 +171,17 @@ select.login-fill-box{
     background-color:var(--nar) ;
     color: var(--text-in);
     font-size: 15px;
-    padding: 10px;
-    border: 0px solid rgb(68,182,234);
-    border-radius: 12px;
+    font-weight: bold;
+    padding:12px;
+    border:1.5px solid var(--nar);
+    border-radius: 15px;
     box-shadow: 0 0 8px 0 var(--shad);
+    transition: background-color .4s ease, color .4s ease, border .4s ease;
+}
+
+.login-info-bottom-login-button:hover{
+    background-color:var(--bg) ;
+    color: var(--nar);
 }
 
 .login-info-bottom-register .link,

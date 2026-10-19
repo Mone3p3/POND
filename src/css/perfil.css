@@ -135,6 +135,12 @@
     width: 110px;
 }
 
+.follow-btn:hover{
+    background-color: var(--text-in);
+    color: var(--nar);
+    box-shadow: 0 0 8px 1px var(--shad);
+}
+
 .edit-btn:hover{
     background-color: var(--blu);
     color: var(--text-in);

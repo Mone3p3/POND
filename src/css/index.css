@@ -4,14 +4,15 @@
   --text-in: #fff;
   --bg: #fff;
   --bg-ov: #80808060;
+  --bg-hv: #80808010;
   --border: #000000;
   --border-in: #fff;
   --border-gr: #808080;
   --shad: rgb(180, 180, 180);
   --nar: #f17c3f;
   --blu: #55bcc9;
-  --menu-btn: linear-gradient(to right, rgba(255, 255, 255, 0.666), rgba(255, 255, 255, 0.333));
-  --menu-btn-hover: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.666));
+  --menu-btn: linear-gradient(to left, rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.158), #83c3fa4d);
+  --menu-btn-hover: linear-gradient(to right, rgba(255, 255, 255, 0.195), rgba(255, 255, 255, 0.441));
   --menu: linear-gradient(to bottom, rgb(67, 123, 245)10%, rgb(68, 182, 234), rgb(156, 212, 227));
   --header: linear-gradient(to right, rgb(67, 123, 245)10%, rgb(68, 182, 234), rgb(156, 212, 227));
   /*

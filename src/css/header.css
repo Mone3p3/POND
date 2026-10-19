@@ -125,19 +125,32 @@
                 margin: 5px 0;
                 font-size:1pc;
                 font-weight: bold;
+                position: relative;
+                isolation: isolate;
                 background-image:var(--menu-btn);
-                color: var(--text);
+                color: var(--text-in);
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 gap: 10px;
                 text-decoration: none;
-                
+    
             }
 
-            .menu-section:hover{
+            .menu-section::before {
+                content: "";
+                position: absolute;
+                inset: 0;
                 background-image: var(--menu-btn-hover);
+                opacity: 0;
+                transition: opacity 250ms ease;
+                z-index: -1;
             }
+
+            .menu-section:hover::before {
+                opacity: 1;
+            }
+ 
 
             .menu-lateral-bottom{
 
@@ -147,20 +160,33 @@
                 bottom: 20px;
                 right: 15px;
                 padding: 10px;
-                border-radius: 20px;
                 font-size: 15px;
+                text-decoration: none;
+
 
             }
 
-            .menu-lateral-bottom-container{
+            .menu-lateral-bottom::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: linear-gradient(to left, rgba(247, 109, 109, 0.293), rgba(237, 129, 129, 0));
+                border-radius: 12px;
+                opacity: 0;
+                transition: opacity 250ms ease;
+                z-index: -1;
+            }
 
+            .menu-lateral-bottom:hover::before{
+                opacity: 1;
+            }
+
+            .menu-lateral-bottom-container{
                 display: flex;
                 align-items: center;
                 gap:10px;
                 color: red;
                 font-weight: bold;
-                text-decoration: none;
-
             }
 
             .header-bar{
@@ -257,7 +283,7 @@
                 color:var(--text-in);
                 align-items: center;
                 justify-content: center;
-                padding: 10px;
+                padding: 10px 20px;
                 box-sizing: border-box;
                 border-radius: 40px;
                 display: flex;
@@ -269,9 +295,9 @@
             }
 
             .publicar-button:hover{
-                background-color: var(--bg);
+                background-color: var(--text-in);
                 color:var(--nar);
-                box-shadow: 0 0 8px 1px var(--bg);
+                box-shadow: 0 0 8px 2px var(--shad);
             }
 
 

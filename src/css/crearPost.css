@@ -85,10 +85,21 @@
     align-items: center;
 }
 
+
 .crear-bottom-left svg{
     width: 30px;
     margin:0 10px;
+    cursor: pointer;
+    padding: 0;
+    transition: padding .2s ease;
 }
+
+.crear-bottom-left svg:hover {
+    padding: 2px;
+    border-radius: 15px;
+    background-color: var(--bg-hv);
+}
+
 
 .crear-top .cerrar{
     border: none;
@@ -114,6 +125,12 @@
     font-size: 15px;
     font-weight: bold;
     box-shadow: 0 0 8px 0px var(--shad);
+}
+
+.publicar-button-crear:hover{
+    background-color: var(--text-in);
+    color: var(--nar);
+    box-shadow: 0 0 8px 1px var(--shad);
 }
 
 .poll-text{
@@ -157,3 +174,77 @@
     margin: 0 20% 20px 10%;
     padding: 10px;
 }
+
+.emoji-picker-container {
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    z-index: 100;
+    background-color: var(--bg);
+}
+
+.emoji-picker{
+    --epr-bg-color: var(--bg);
+    --epr-text-color: var(--text);
+    --epr-category-label-bg-color: var(--bg);
+    --epr-search-input-bg-color: var(--bg-ov);
+    --epr-hover-bg-color: var(--shadow);
+    --epr-picker-border-color: var(--border);
+}
+
+.crear-bg {
+    animation: aparecerFondo 250ms ease;
+}
+
+.crear-container {
+    animation: aparecerContainer 250ms ease;
+}
+
+@keyframes aparecerFondo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes aparecerContainer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.crear-bg.cerrando {
+    animation: desaparecerFondo 250ms ease forwards;
+}
+
+.crear-bg.cerrando .crear-container {
+    animation: desaparecerContainer 250ms ease forwards;
+}
+
+@keyframes desaparecerFondo {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes desaparecerContainer {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+}
+

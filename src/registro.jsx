@@ -1,9 +1,94 @@
 import './css/login.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
 
 function Registro() {
+    const navigate = useNavigate();
+    const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: ""
+  });
+  const [message, setMessage] = useState("");
 
-    return (
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+
+    
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    
+    e.preventDefault();
+
+    // Basic client-side validation
+    if (!formData.username || !formData.email || !formData.password || !formData.confirmPassword) {
+      setMessage("All fields are required.");
+      console.log("All fields are required.");
+      return;
+    }else if (formData.password !== formData.confirmPassword) {
+      setMessage("Passwords do not match.");
+      console.log("Passwords do not match.");
+      return;
+    }else if (formData.password.length < 6 || formData.password.length > 255) {
+      setMessage("Password must be 6 to 255 characters long.");
+      console.log("Password must be  6 to 255 characters long.");
+      return;
+    }else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      setMessage("Invalid email format.");
+      console.log("Invalid email format.");
+      return;
+    }else if (!/^[a-zA-Z0-9_]+$/.test(formData.username)) {
+      setMessage("Username can only contain letters, numbers, and underscores.");
+      console.log("Username can only contain letters, numbers, and underscores.");
+      return;
+    }else if (formData.username.length > 50) {
+      setMessage("Username cannot exceed 50 characters.");
+      console.log("Username cannot exceed 50 characters.");
+      return;
+    }else if (formData.email.length > 100) {
+      setMessage("Email cannot exceed 100 characters.");
+      console.log("Email cannot exceed 100 characters.");
+      return;
+    }
+
+        const payload = {
+            username: formData.username.trim(),
+            email: formData.email.trim(),
+            password: formData.password,
+            confirm_password: formData.confirmPassword
+        };
+
+        console.log("Sending registration data:", {
+            ...payload,
+            password: "[hidden]",
+            confirm_password: "[hidden]"
+        });
+
+    try {
+        const response = await fetch("http://localhost/POND/src/php/Register.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+      });
+
+      const result = await response.json();
+            setMessage(result.message);
+            if (!response.ok) {
+                console.log("server response not ok:", result);
+                return;
+            }
+            navigate('/');
+    } catch (error) {
+      setMessage("Error connecting to server.");
+      console.log("Error connecting to serverWAWA.", error);
+    }
+
+  };
+
+  return (
         <div className="login-container">
             <div className="login-imagen-container">
                 <img src="/images/estanque2.jpg" alt="Estanque" className="login-imagen" style={{ opacity: 0.9 }}/>
@@ -25,7 +110,7 @@ function Registro() {
 
                 <div className="login-fill-box-container">
                     <label className="login-fill-box">
-                        <input type="email" placeholder="Correo" name="correo"></input>
+                        <input type="email" placeholder="Correo" name="email" value={formData.email} onChange={handleChange}></input>
                     </label>
                     
                     <div className='login-fill-box-fecha'>
@@ -212,16 +297,22 @@ function Registro() {
                     </div>
 
                     <label className="login-fill-box">
-                        <input type="text" placeholder="Usuario" name="user"></input>
+                        <input type="text" placeholder="Usuario" name="username" value={formData.username} onChange={handleChange}></input>
                     </label>
 
                     <label className="login-fill-box">
-                        <input type="password" placeholder="Contraseña" name="password"/>
+                        <input type="password" placeholder="Contraseña" name="password" value={formData.password} onChange={handleChange}/>
                     </label>
 
                     <label className="login-fill-box">
-                        <input type="password" placeholder="Confirmar contraseña"/>
+                        <input type="password" placeholder="Confirmar contraseña" name="confirmPassword" onChange={handleChange}/>
                     </label>
+
+                    {message && (
+                        <p className="login-form-errormessage" role="alert">
+                            {message}
+                        </p>
+                    )}
 
                 </div>
 
@@ -230,11 +321,15 @@ function Registro() {
                         <span>¿Ya tienes una cuenta? <Link to={'/login'} className='link bold'>Inicia sesión</Link> </span>
                     </div>
 
-                    <Link to={"/"} className="link">
-                        <button className='login-info-bottom-login-button'>
+                    {/* <Link to={"/"} className="link">
+                        <button className='login-info-bottom-login-button' onMouseUp={handleSubmit}>
                             <span>Registrarse</span>
                         </button>
-                    </Link>
+                    </Link>*/}
+
+                    <button className='login-info-bottom-login-button' onClick={handleSubmit}>
+                            <span>Registrarse</span>
+                    </button>
                 </div>
             </div>
         </div>

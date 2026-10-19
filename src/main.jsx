@@ -17,6 +17,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
+const temaGuardado = localStorage.getItem('tema') || 'auto';
+
+if (temaGuardado === 'auto') {
+    document.documentElement.removeAttribute('data-theme');
+} else {
+    document.documentElement.setAttribute('data-theme', temaGuardado);
+}
+
 const router = createBrowserRouter([
     {path:"/", element: <Layout><App/></Layout>},
     {path:"/login", element: <Login/>},

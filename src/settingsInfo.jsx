@@ -54,9 +54,9 @@ function SettingsInfo(){
                       </select>
                     </div>
                   </div>
-                  <div className="">
-                    <button type="button" className="login-info-bottom-login-button">Confirmar</button>
-                    <button type="button" className="login-info-bottom-login-button">Cancelar</button>
+                  <div className="d-flex flex-row gap-3 w-100 pt-4 justify-content-end">
+                    <button type="button" className="info-btn info-btn-a">Confirmar</button>
+                    <button type="button" className="info-btn info-btn-c">Cancelar</button>
                   </div>
                 </form>
               </div>

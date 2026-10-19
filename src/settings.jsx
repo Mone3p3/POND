@@ -54,7 +54,23 @@ function Settings() {
                             <span className='texto-main bold'>Accesibilidad</span>
                         </div>
 
+                        <div className='ajustes-logout-container'>
+                        <hr></hr>
+                        <Link to={"/login"} className="ajustes-logout">
+                            
+                            <div className="ajustes-logout-btn"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="red">
+                                    <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/>
+                                </svg>
+                                <span className='ms-2'>Cerrar Sesión</span>
+                            </div>
+                        </Link>
+                        <hr></hr>
                     </div>
+
+                    </div>
+
+                    
 
                 </div>
 
@@ -66,7 +82,7 @@ function Settings() {
                     <div className="ajustes-icon-container">
                         {menuSett === 'info' || menuSett === 'contraseña' ? (
                             <Link id="back-perfil" onClick={() => setMenuSett('cuenta')}>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--text-in)">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--text)">
                                     <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
                                 </svg>
                             </Link>

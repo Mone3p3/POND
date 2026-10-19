@@ -34,10 +34,9 @@ function Login() {
                             <input type="password" placeholder="Contraseña" name="password" autoComplete='current-password'/>
                         </label>
 
-                        <span className="login-forgot"> Olvidé la contraseña </span>
                     </div>
 
-                    <div className="login-info-bottom">
+                    <div className="login-info-bottom mt-4">
                         <div className="login-info-bottom-register">
                             <span>¿No tienes cuenta? <Link to={'/registro'} className='link bold'>Regístrate</Link> </span>
                         </div>

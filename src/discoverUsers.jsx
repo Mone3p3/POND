@@ -19,7 +19,7 @@ function DiscoverUsers(){
     return(
         <div>
             {discoverUsers.map((post,index) => (
-                <Link to={'/perfilAjeno'} className='d-flex align-items-center w-100 text-decoration-none mt-4' key={index}>
+                <Link to={'/perfilAjeno'} className='d-flex align-items-center w-100 text-decoration-none rounded-3 py-3 discover-hover' key={index}>
                     <div className="user-image-small">
                         <img src={post.userImage} alt="user-icon"/>
                     </div>
