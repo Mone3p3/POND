@@ -28,9 +28,25 @@ function Header({abrirCrear}) {
 
     },[]);
 
+    useEffect(() => {
+        const movil = window.innerWidth <= 992;
+        document.body.style.overflow = menuAbierto && movil ? 'hidden' : '';
+
+        const onKey = (e) => { if (e.key === 'Escape') setMenuAbierto(false); };
+        document.addEventListener('keydown', onKey);
+
+        return () => {
+            document.body.style.overflow = '';
+            document.removeEventListener('keydown', onKey);
+        };
+    }, [menuAbierto]);
+
     
     return(
         <header id="head">
+
+            <div className={`menu-overlay ${menuAbierto ? "show" : ""}`} onClick={() => setMenuAbierto(false)}></div>
+            
             <div className={`menu-lateral ${menuAbierto ? "show" : ""}`} id="menu" ref={menuRef}>
                 
                 <div className="menu-lateral-center">
@@ -78,12 +94,14 @@ function Header({abrirCrear}) {
                         <span>Cerrar Sesión</span>
                     </div>
                 </Link>
+                
             </div>
+            
 
             <div className="header-bar">
                 <div className="leftContent">
                     <label className="boton-menu-container">
-                        <button onClick={() => setMenuAbierto(!menuAbierto)} className="boton-menu" id="boton-menu" aria-expanded="false">
+                        <button onClick={() => setMenuAbierto(!menuAbierto)} className="boton-menu" id="boton-menu" aria-expanded={menuAbierto}>
                             <svg viewBox="0 0 25 20">
                                 <rect y="2" width="25" height="3" fill="white"></rect>
                                 <rect y="9" width="25" height="3" fill="white"></rect>
@@ -111,15 +129,15 @@ function Header({abrirCrear}) {
                 </div>
 
                 <div className="rightContent">
-                    <button className="publicar-button bold" onClick={abrirCrear}>
+                    <button className="publicar-button bold publicar-header" onClick={abrirCrear}>
                         <span>+ Publicar</span>
                     </button>
 
                     
                     <Link to={"/perfil"} className='user-icon-header d-flex align-items-center ps-4 ms-auto'>
                         <div className='d-flex flex-column pt-1 text-end'>
-                            <span className='bold lh-1'>Patatero</span>
-                            <span>@aloba</span>
+                            <span className='bold lh-1 nombre-header'>Patatero</span>
+                            <span className='nombre-header'>@aloba</span>
                         </div>
                         <img className='user-image-small' src="/images/estanque2.jpg" alt="Cosa bella" />
                     </Link>

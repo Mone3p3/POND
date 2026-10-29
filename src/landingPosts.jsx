@@ -40,7 +40,7 @@ function LandingPosts(){
     const [emojiPickerPost, setEmojiPickerPost] = useState(null);
 
     return(
-        <div>
+        <>
             {posts.map((post, index) => (
                 <div className="post-container" key={index}>
                     <Link to={'/perfilAjeno'} className="post-user-container">
@@ -59,9 +59,9 @@ function LandingPosts(){
                             <p className="post-text"> {post.texto} </p>
                         </div>
 
-                        <Link to={'/perfilAjeno'} className="post-image">
+                        <div className="post-image">
                             <img src={post.imagen} alt="post-image"/>
-                        </Link>
+                        </div>
 
                     </Link>
 
@@ -81,12 +81,12 @@ function LandingPosts(){
                             <span className="post-bottom-likes-number me-1"> {post.likes + (likedPosts[index] ? 1 : 0)} </span>
                         </button>
 
-                        <div className="post-bottom-container-likes">
+                        {/*<div className="post-bottom-container-likes">
                             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--text-sub)">
                                 <path d="M640-160v-280h160v280H640Zm-240 0v-640h160v640H400Zm-240 0v-440h160v440H160Z"/>
                             </svg>
                             <span className="post-bottom-likes-number"> {post.views} </span>
-                        </div>
+                        </div>*/}
 
                         <div className="reaccion-container">
                             <button type="button" className="post-bottom-container-likes rounded-4 p-1" onClick={() => setEmojiPickerPost( emojiPickerPost === index ? null : index) }>
@@ -112,7 +112,7 @@ function LandingPosts(){
                     </div>
                 </div>
             ))}
-        </div>
+        </>
     );
 }
 

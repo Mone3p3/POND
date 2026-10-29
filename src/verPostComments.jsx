@@ -13,7 +13,6 @@ const comments = [
         comentarios: 2,
         likes: 70,
         reposts: 7,
-        views: 700,
         emojis: 3,
     },
     {
@@ -24,7 +23,6 @@ const comments = [
         comentarios: 5,
         likes: 10,
         reposts: 2,
-        views: 30,
         emojis: 13
     }
 ];
@@ -72,12 +70,12 @@ function Comments(){
                             <span className="post-bottom-likes-number me-1"> {post.likes + (likedPosts[index] ? 1 : 0)} </span>
                         </button>
 
-                        <div className="post-bottom-container-likes">
+                        {/*<div className="post-bottom-container-likes">
                             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--text-sub)">
                                 <path d="M640-160v-280h160v280H640Zm-240 0v-640h160v640H400Zm-240 0v-440h160v440H160Z"/>
                             </svg>
                             <span className="post-bottom-likes-number"> {post.views} </span>
-                        </div>
+                        </div>*/}
 
                         <div className="reaccion-container">
                             <button type="button" className="post-bottom-container-likes rounded-4 p-1" onClick={() => setEmojiPickerPost( emojiPickerPost === index ? null : index) }>

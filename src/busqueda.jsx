@@ -28,7 +28,7 @@ function Busqueda(){
                 </div>
             </div>
 
-            <div className="main-central pt-3">
+            <div className="main-central busqueda-central pt-3">
                 <div className='d-flex justify-items-start w-100'>
                     <button className={`category-btn ms-4 ${categoria === 'publicaciones' ? 'seleccionado' : ''}`} onClick={() => setCategoria('publicaciones')}>
                         Publicaciones

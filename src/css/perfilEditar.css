@@ -1,0 +1,198 @@
+
+.editar-container{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    box-shadow: 0px 0px 8px 1px var(--shad);
+    margin: auto;
+}
+
+.editar-container.con-imagen{
+    height: 100%;
+}
+
+
+.editar-container hr{
+    margin: 10px;
+}
+
+.editar-top{
+    display:flex;
+    justify-content: space-between;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+
+.editar-content{
+    flex:1;
+    overflow-y: auto;
+}
+
+.editar-banner{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    aspect-ratio:1047/205;
+    border-radius:43px;
+    object-fit:cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.500);
+    cursor: pointer;
+}
+
+
+.editar-pfp{
+    position:absolute;
+    left:38px;
+    bottom:-58px;
+    width:132px;
+    height:132px;
+    border-radius:999px;
+    border:3px solid var(--bg);
+    background-color: rgba(0, 0, 0, 0.500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.editar-text{
+    margin: 10px 80px;
+}
+
+.editar-text textarea{
+    background-color: var(--bg);
+    width: 100%;
+    border:none;
+    outline: none;
+    color:var(--text);
+    resize: none;
+    max-height: 8lh;
+}
+
+.editar-img{
+    border: 1.2px solid var(--border-gr);
+    border-radius: 12px;
+    margin: 10px 80px;
+    display: inline-block;
+    max-width: 80%;
+    overflow: hidden;
+}
+
+
+.edit-option{
+    display: flex;
+    align-items: center;
+    background-color: var(--bg);
+    border: 1px solid var(--border-gr);
+    border-radius: 15px;
+    margin: 0 20% 20px 0;
+}
+
+.edit-option textarea{
+    background-color: var(--bg);
+    width: 100%;
+    outline: none;
+    field-sizing: content;
+    resize: none;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+
+.editar-img img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.editar-bottom{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px 15px;
+    align-items: center;
+}
+
+
+.editar-bottom-left svg{
+    width: 30px;
+    margin:0 10px;
+    cursor: pointer;
+    padding: 0;
+    transition: padding .2s ease;
+}
+
+.editar-bottom-left svg:hover {
+    padding: 2px;
+    border-radius: 15px;
+    background-color: var(--bg-hv);
+}
+
+
+.editar-top .cerrar{
+    border: none;
+    border-radius: 50%;
+    box-shadow: none;
+    color: var(--text);
+    background-color: none;
+    width: 30px;
+    height: 30px;
+    background: none;
+    padding: 0;
+}
+
+.guardar-button-editar{
+    border: 1.8px solid var(--nar);
+    color:var(--nar);
+    background-color: var(--bg);
+    align-items: center;
+    width: 100px;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 0 8px 0px var(--shad);
+}
+
+.cancelar-button-editar{
+    border: 0 solid var(--nar);
+    color:var(--text-in);
+    background-color: var(--nar);
+    align-items: center;
+    width: 100px;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 0 8px 0px var(--shad);
+}
+
+.guardar-button-editar:hover{
+    background-color: var(--text-in);
+    color: var(--nar);
+    box-shadow: 0 0 8px 1px var(--shad);
+    border: 1.8px solid var(--text-in);
+}
+
+.cancelar-button-editar:hover{
+    background-color: var(--text-in);
+    color: var(--nar);
+    box-shadow: 0 0 8px 1px var(--shad);
+}

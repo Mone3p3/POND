@@ -190,17 +190,35 @@
         .background{
             display:flex;    
             background-color: var(--bg);
-                min-height: 100vh;
+            min-height: 100vh;
+            width: 100%;
 
         }
 
         .main-izquierda{
 
             justify-content: left;
-            flex:.2;
+            flex: 0 0 200px;
             width: 200px; 
             height: 2000px; 
 
+        }
+
+        .lateral-pf{
+            flex:.5;
+            background-color: var(--bg);
+            justify-content: center;
+            padding-top: 20px;
+            display: flex;
+        }
+
+        .lateral-pf.ajustes-base{
+            flex:.25;
+        }
+
+        .lateral-pf #back-perfil,
+        .lateral-pf #category{
+            position: fixed;
         }
 
 /*----- POSTS ------------------------------------------------------------------------------*/
@@ -210,9 +228,10 @@
             justify-content: center; 
             justify-items: center; 
             flex:4; 
-            width: 500px; 
-            height: 2000px; 
+            min-width: 0;
+            height: auto; 
             overflow: hidden;
+            padding-bottom: 20px;
 
         }   
 
@@ -220,9 +239,10 @@
             .user-container{
                 border-radius: 15px; 
                 background-color: var(--bg); 
-                width: 800px; 
+                width: 100%; 
+                max-width: 800px;
                 padding: 20px 0;
-                max-height: 2000px; 
+                margin: 0 auto;
                 overflow: hidden;
                 line-height: 1.2;
             }
@@ -235,9 +255,10 @@
 
                 border-radius: 15px; 
                 background-color: var(--bg); 
-                width: 800px; 
+                width: 100%; 
+                max-width: 800px;
                 max-height: 2000px; 
-                margin-top: 50px; 
+                margin: 50px auto 0;
                 overflow: hidden;
                 box-shadow: 0px 0px 8px 1px var(--shad); 
                 
@@ -251,7 +272,7 @@
             .post-user-container{
 
                 width: 100%; 
-                height: 15%; 
+                height: auto; 
                 display: flex; 
                 flex-direction:row; 
                 justify-content: start; 
@@ -297,17 +318,26 @@
 
             .post-image{
 
-                border:1.2px solid; 
+                border:1.2px solid var(--border-gr); 
                 border-radius: 12px; 
-                border-color: var(--border-gr); 
                 display:inline-block; 
                 line-height: 0; 
-                max-width: 800px;  
+                max-width: calc(100% - 100px); 
                 overflow: hidden; 
                 margin-left: 80px; 
                 margin-bottom: 20px; 
-                object-fit: contain;
 
+            }
+
+            .post-image img,
+            .post-image video{
+                max-width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+            .post-text{
+                overflow-wrap: anywhere;  
             }
 
             .post-image.ver{
@@ -388,25 +418,49 @@
                 display: inline-block;
             }
 
+            .reaccion-container {
+                position: relative;
+            }
+
+            .reaccion-container > button{
+                min-width: 56px;
+                height: 40px;
+                justify-content: center;
+            }
+
+            .reaccion-container .emoji-picker-container {
+                position: absolute;
+                bottom: 100%;
+                left: -150%;
+                z-index: 1000;
+                margin-right: 5px;
+            }
+
 /*----- DISCOVER -------------------------------------------------------------------------------------------*/
 
         .main-derecha{
 
             flex:2; 
-            width: 500px; 
+            min-width: 280px;
+            max-width: 500px;
+            width: auto; 
             display: flex;
             flex-direction:column;
             align-items: center;
             position:sticky;
             margin-top:20px;
+            padding: 0 10px;
             top:0;
         }
 
             .discover-container{
 
                 display: block; 
-                width: 400px; 
-                height: 400px; 
+                width: 100%; 
+                max-width: 400px;
+                height: auto; 
+                min-height: 200px;
+                box-sizing: border-box;
                 border-radius: 15px;
                 box-shadow: 0 0 10px 1px var(--shad);
                 padding:20px;
@@ -424,7 +478,8 @@
                 display: flex; 
                 align-items: center; 
                 width: 100%; 
-                height: 50px;
+                height: auto;
+                min-height: 50px;
 
             }
             
@@ -443,8 +498,11 @@
             .tendencia-container{
 
                 display: block;
-                width: 400px; 
-                height: 400px; 
+                width: 100%; 
+                max-width: 400px;
+                height: auto; 
+                min-height: 200px;
+                box-sizing: border-box;
                 border-radius: 15px;
                 box-shadow: 0 0 10px 1px var(--shad);
                 padding-top:40px;
@@ -465,8 +523,11 @@
             .apoya-container{
 
                 display: block; 
-                width: 400px; 
-                height: 400px; 
+                width: 100%; 
+                max-width: 400px;
+                height: auto; 
+                min-height: 200px;
+                box-sizing: border-box;
                 border-radius: 15px;
                 box-shadow: 0 0 10px 1px var(--shad);
                 padding:20px;
@@ -476,7 +537,7 @@
             }
 
             .twitch-ratio{
-                width: 95%;
+                width: 100%;
                 aspect-ratio: 8 / 6;
                 height: auto;
                 border: none;
@@ -484,12 +545,71 @@
             }
         
 
-/* --- SVG -------------------------------------------------------- */
+/* --- Responsividad  -------------------------------------------------------- */
 
-            .svg-general{
-                fill: var();
-            }
+
+
+@media (max-width: 1100px) {
+    .main-derecha,
+    .separador-vertical,
+    .lateral-pf {
+        display: none;
+    }
+
+    .main-central {
+        flex: 1;
+        width: 100%;
+        height: auto;      
+        min-width: 0;     
         
+    }
+}
 
+@media (max-width: 700px) {
+    .post-container,
+    .user-container {
+        width: 94%;
+        max-width: 800px;
+    }
 
+    .post-container {
+        margin-top: 24px;
+    }
 
+    .post-text {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .post-image {
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: calc(100% - 40px);
+    }
+
+    .post-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .post-image.ver,
+    .post-text.ver {
+        margin-left: 20px;
+    }
+
+    .post-bottom-container {
+        width: 100%;
+        padding: 15px 10px;
+    }
+
+    .post-bottom-container svg,
+    .post-bottom-container .emoji-reaccion {
+        margin-right: 10px;
+    }
+
+    .user-image-small {
+        margin-left: 12px;
+    }
+
+    
+}

@@ -201,8 +201,7 @@ function CrearPost({cerrarCrear, mostrarMensaje, cerrandoCrear }){
 
                         {mostrarEmojis && (
                             <div className="emoji-picker-container">
-                                <EmojiPicker className="emoji-picker" onEmojiClick={(emojiData) => {setTexto(texto + emojiData.emoji); setMostrarEmojis(false); }} previewConfig={{ showPreview: false }}/>
-                            </div>
+                            <EmojiPicker className="emoji-picker" onEmojiClick={(emojiData) => {setTexto(texto + emojiData.emoji); setMostrarEmojis(false);}} suggestedEmojis={['1f44d', '2764', '1f602', '1f525', '1f389']} previewConfig={{ showPreview: false }}/></div>
                         )}
                         
                         <svg onClick={() => setPoll('poll')} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--text-sub)">

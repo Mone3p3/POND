@@ -5,8 +5,11 @@ import './css/settings.css';
 import ExternalProfilePosts from './externalProfilePosts';
 import MoverAlInicio from './moverAlInicio';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function PerfilAjeno(){
+
+    const [siguiendo, setSiguiendo] = useState('noSiguiendo');
 
     return(
         <div className='background'>
@@ -22,10 +25,14 @@ function PerfilAjeno(){
             </div>
             <div className='lateral-pf'></div>
             <div className='main-central pt-2'>
-                <div className='position-relative w-100 m-auto'>
+                <div className='perfil-banner'>
                     <img className="banner" src="images/estanque2.jpg" alt="banner" id="banner"/>
                     <img className="pfp" src="images/sapoPfp.jpg" alt="profilePicture" id="pfp" />
-                    <button className="follow-profile-btn">Seguir</button>
+                    {siguiendo === 'noSiguiendo' ? (
+                        <button onClick={() => setSiguiendo('siguiendo')} className="follow-profile-btn">Seguir</button>
+                    ) : (
+                        <button onClick={() => setSiguiendo('noSiguiendo')} className="following-profile-btn">Siguiendo</button>
+                    )}
                 </div>
 
 

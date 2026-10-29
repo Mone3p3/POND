@@ -23,7 +23,7 @@ function SearchUsers(){
             {users.map((post,index) => (
                 <div className='search-container' key={index}>
                     <div className="search-user-container discover-hover rounded-4">
-                        <Link to={'/perfilAjeno'} className='d-flex align-items-center w-100 text-decoration-none '>
+                        <Link to={'/perfilAjeno'} className='d-flex align-items-center text-decoration-none '>
                             <div className="user-image-small">
                                 <img src={post.userImage} alt="user-icon"/>
                             </div>

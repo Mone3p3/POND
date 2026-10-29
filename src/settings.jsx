@@ -17,7 +17,7 @@ function Settings() {
     return (
         <>
             
-            <div className="background">
+            <div className="background settings-bg">
                 <MoverAlInicio/>
                 <div className='lateral-pf'>
                     <div className="ajustes-icon-container">

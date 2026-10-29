@@ -1,24 +1,12 @@
 
 
-
-
-.lateral-pf{
-    flex:.5;
-    background-color: var(--bg);
-    justify-content: center;
-    padding-top: 20px;
-    display: flex;
+.perfil-banner{
+    position: relative;
+    width: 90%;
+    max-width: 1047px;
+    min-width: 200px;
+    margin: 0 auto;
 }
-
-.lateral-pf.ajustes-base{
-    flex:.25;
-}
-
-.lateral-pf #back-perfil,
-.lateral-pf #category{
-    position: fixed;
-}
-
 
 .banner{
     width:100%;
@@ -121,6 +109,21 @@
     box-shadow: 0 0 0 8px var(--bg);
 }
 
+.following-profile-btn{
+    border-radius:67px;
+    border:1.5px solid var(--text-in);
+    background:var(--text-in);
+    color:var(--nar);
+    padding:10px 15px;
+    cursor:pointer;
+    font-weight:500;
+    font-size:1pc;
+    position: absolute;
+    right: 30px; 
+    bottom: -18px; 
+    box-shadow: 0 0 0 8px var(--bg);
+}
+
 .follow-btn{
     border-radius: 67px;
     border: 0px solid var(--bg);
@@ -150,4 +153,53 @@
 .follow-profile-btn:hover{
     background-color: var(--nar);
     color: var(--text-in);
+}
+
+.following-profile-btn:hover{
+    background-color: var(--nar);
+    color: var(--text-in);
+    border-color: var(--nar);
+}
+
+
+
+/* --- Responsivo -----------------------------*/
+
+@media (max-width: 700px){
+    .banner{ 
+        border-radius: 20px; 
+    }
+
+    .pfp{
+        left: 16px;
+        bottom: -40px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .edit-btn,
+    .follow-profile-btn{
+        right: 12px;
+        bottom: -16px;
+        font-size: .9pc;
+        padding: 8px 12px;
+    }
+
+    .user-desc{
+        margin-top: 55px;
+        gap: 12px;
+    }
+
+    .user-desc-left{
+        width: 100%;
+        min-width: 0;
+        margin-left: 16px;
+    }
+
+    .user-desc-right{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .user-desc-meta{ text-align: left; }
 }
